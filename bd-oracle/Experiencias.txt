@@ -20,3 +20,14 @@
     Gestión de inventarios: ajustes de stock, registrar movimientos.
     Procesos de compra: órdenes, recepción y facturación.
     Cálculo de precios, descuentos y promociones.
+
+- asp.net MVC, bootstrap, jquery
+    - aplicacion web para crear requisiciones, portal para los ing de campo, solucion para subir data
+        por problemas de internet.
+        funcionalidades: crea requisiciones, configuracion de usuarios para autorizar y crear, listado
+            de requisiciones y estatus todo por usuario. data que consume sap.
+    - aplicacion web monitor de ordenes de produccion. portal para los ing de campo, solucion para subir data
+        por problemas de internet.
+        funcionalidades: mostrar las ordenes del sistema SAP por usuario, con el fin para crear avances
+        desde aqui. es decir, podemos modificar las etapas de produccion cargandoles cantidades a los insumos.
+        muestra el inventario de insumos.
