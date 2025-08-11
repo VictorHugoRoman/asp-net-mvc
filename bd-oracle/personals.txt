@@ -1,0 +1,29 @@
+✅ PREGUNTA: Cuéntame sobre tu situación personal y familiar
+💬 Respuesta sugerida:
+    "Actualmente tengo una familia con dos hijos, lo cual me da mucha motivación y estabilidad. 
+    Esto me ha ayudado a enfocarme en el crecimiento profesional con responsabilidad y compromiso, ya que 
+    busco siempre un equilibrio entre lo personal y lo laboral. Me considero una persona constante, que valora 
+    mucho la estabilidad, el trabajo en equipo y el cumplimiento de objetivos."
+
+✅ PREGUNTA: ¿Dónde estás trabajando actualmente? ¿Qué haces?
+💬 Respuesta estratégica:
+    "Actualmente estoy colaborando en un proyecto donde interactúo con herramientas como SAP Business One y 
+    SAP HANA donde recientemente desarrallomas dos apps web con asp.net, jquery 3.1, bootstrap 5. ademas de librerias
+    como sweetAlert, selectSize, animate-css
+    Sin embargo, mi enfoque profesional y técnico más 
+    fuerte viene de mi experiencia anterior, donde desarrollé proyectos robustos con tecnologías como Oracle 
+    PL/SQL y .NET Framework. Ahí tuve la oportunidad de trabajar de forma integral desde la lógica de negocio hasta 
+    la base de datos, integrando diferentes tecnologías, y es justo ese tipo de trabajo el que quiero retomar 
+    y seguir perfeccionando."
+🧠 [Nota: Esta respuesta contextualiza tu situación actual sin desprestigiarla, pero redirige el foco hacia 
+tu experiencia más valiosa.]
+
+✅ PREGUNTA: ¿Cuáles son tus aspiraciones o metas a corto y largo plazo, personales y profesionales?
+💬 Respuesta sugerida:
+    "A corto plazo", quiero integrarme a un equipo donde pueda aplicar mis conocimientos en desarrollo .NET y Oracle, 
+    y al mismo tiempo seguir aprendiendo. Profesionalmente, me interesa crecer en un entorno técnico sólido y retador, 
+    donde pueda participar en proyectos que realmente impacten el negocio.
+    "A largo plazo", me visualizo consolidando mi perfil como desarrollador senior o líder técnico, sin dejar de 
+    lado el aprendizaje constante. En lo personal, busco mantener un equilibrio con mi familia y seguir brindándoles 
+    estabilidad, por eso valoro mucho los ambientes laborales donde hay claridad, crecimiento y compromiso mutuo."
+

@@ -1,0 +1,22 @@
+- Triggers:
+    Sistema gps: usabamos Triggers para registrar actividades inusuales de maquinaria, por ejemplo,
+        el tiempo y lugar que se detuvo, cruce de geocercas, es decir, despues de insertar un evento
+        usual como encender, apagar,avanzar cada 5 segundos se hacia el proceso usando AFTER INSERT
+        de actividades inusuales.
+    Auditorías (insert/update/delete) en tablas críticas: productos, inventarios, ventas, compras, usuarios.
+        guardaba en bitcora estas actividades, en avila lo implemente y en mezta optimice el modulo de reportes
+        de bitcora usando reflection C# para reutilizacion de codigo.
+    Validación automática: por ejemplo, evitar stocks negativo y excedentes en movimiento de requisiciones.
+    Ajustes de almacen: Auditoría de ajustes, cuando se realizaban ajustes se guardarba en bitacora quien, cuando
+        cuanto, por que. en el trigger after insert.
+        tambien me toco crear una para validar que un ajuste no deje stocks negativos, use el trigger befor update
+
+- Procedimientos almacenados:
+    Reportes Complejos, se programaban en Procedimientos para un mejor acceso y procesamiento de 
+        la data. Legitimidad del codigo C# ya que se evitaba el codigo espagueti que generabamos al
+        formar la consulta.
+    Procesos de venta: crear pedidos, validar stock, reservar productos.
+        Se hacian validaciones en el mismo proceso.
+    Gestión de inventarios: ajustes de stock, registrar movimientos.
+    Procesos de compra: órdenes, recepción y facturación.
+    Cálculo de precios, descuentos y promociones.

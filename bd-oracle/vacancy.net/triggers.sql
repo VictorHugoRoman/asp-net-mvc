@@ -58,11 +58,11 @@ END;
 /
 --uso del WHEN, solo funcion con FOR EACH ROW
 CREATE OR REPLACE TRIGGER valida_salario
-BEFORE UPDATE OF salario ON EMPLEADOS  -- Solo si se modifica la columna "salario"
+BEFORE UPDATE OF col_salario ON TBL_EMPLEADOS  -- Solo si se modifica la columna "salario"
 FOR EACH ROW  -- Por fila
-WHEN (NEW.salario > 10000)  -- Condición
+WHEN (NEW.col_salario > 10000)  -- Condición
 BEGIN
-  IF :NEW.salario > 20000 THEN
+  IF :NEW.col_salario > 20000 THEN
     RAISE_APPLICATION_ERROR(-20001, 'Salario no puede exceder 20,000');
   END IF;
 END;
