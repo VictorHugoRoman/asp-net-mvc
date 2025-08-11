@@ -1,0 +1,46 @@
+﻿PASOS PARA CREAR UNA BASE DE DATOS O PDB EN ORACLE CON DOCKER
+
+--ingresamos al contenedor levantando la terminal bash
+--db estar corriendo el contenedor
+docker exec -ti oracle-db bash
+
+--Ingresamos al CLI sql con un usuario CDB, nst caso sysdba
+sqlplus / as sysdba
+
+-- This script creates a new pluggable database (PDB) in Oracle Database 12c or later.
+-- an user (CDB) is already created and running.
+CREATE PLUGGABLE DATABASE dbWebServCedis
+ADMIN USER dev_admin IDENTIFIED BY abcd123
+ROLES = (DBA)
+DEFAULT TABLESPACE users
+DATAFILE '/opt/oracle/oradata/FREE/pdb_dev/users02.dbf' SIZE 50M AUTOEXTEND ON
+FILE_NAME_CONVERT = ('/opt/oracle/oradata/FREE/pdbseed/', '/opt/oracle/oradata/FREE/dbWebServCedis/');
+
+-- Open the pluggable database
+ALTER PLUGGABLE DATABASE dbWebServCedis OPEN;
+
+-- Check the status of the PDB
+SELECT pdb_name, status FROM dba_pdbs;
+
+-- Change the session to the new PDB
+ALTER SESSION SET CONTAINER=dbWebServCedis;
+
+-- confirm the current pdb container
+SHOW con_name;
+
+ELIMINAR PDB(bd)
+-- Cerrar el pdb
+ALTER PLUGGABLE DATABASE pdb_dev CLOSE IMMEDIATE;
+-- Eliminar
+DROP PLUGGABLE DATABASE pdb_dev INCLUDING DATAFILES;
+-- verificar
+SELECT pdb_name, status FROM dba_pdbs;
+
+
+-- Muestra todos los usuarios desde CDB
+SELECT con_id, username, account_status, common 
+FROM cdb_users 
+ORDER BY con_id, common DESC, username;
+
+-- Muestra todos los PDB existentes
+SELECT name, open_mode FROM v$pdbs;
